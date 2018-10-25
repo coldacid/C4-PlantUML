@@ -55,6 +55,7 @@ skinparam package<<boundary>> {
 
 skinparam rectangle<<enterprise_boundary>> {
     StereotypeFontSize 0
+    FontSize 0
     FontColor #999999
     BorderStyle dashed
     BorderColor #cccccc
@@ -98,7 +99,7 @@ endlegend
 ' Boundaries
 ' ##################################
 
-!define Enterprise_Boundary(e_alias) rectangle "" <<enterprise_boundary>> as e_alias
+!define Enterprise_Boundary(e_alias) rectangle "[Enterprise]" <<enterprise_boundary>> as e_alias
 !define Enterprise_Boundary(e_alias, e_label) package "==e_label [Enterprise]" <<boundary>> as e_alias
 
 ' Relationship
