@@ -78,6 +78,7 @@ legend right
 |<PERSON_BG_COLOR>      | person |
 |<CONTAINER_BG_COLOR>   | container |
 |<SYSTEM_BG_COLOR>      | external system |
+| <B>- - - - -</B> | enterprise boundary |
 endlegend
 !enddefinelong
 
