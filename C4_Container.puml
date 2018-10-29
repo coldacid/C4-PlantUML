@@ -64,6 +64,13 @@ skinparam rectangle<<component>> {
     BorderColor #3C7FC0
 }
 
+skinparam database<<component>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor COMPONENT_BG_COLOR
+    BorderColor #3C7FC0
+}
+
 skinparam rectangle<<system>> {
     StereotypeFontColor ELEMENT_FONT_COLOR
     FontColor ELEMENT_FONT_COLOR
@@ -141,6 +148,9 @@ skinparam package<<boundary>> {
 
 !define Component(e_alias, e_label, e_techn) rectangle "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//" <<component>> as e_alias
 !define Component(e_alias, e_label, e_techn, e_descr) rectangle "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//\n\n e_descr" <<component>> as e_alias
+
+!define ComponentDB(e_alias, e_label, e_techn) database "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//" <<component>> as e_alias
+!define ComponentDB(e_alias, e_label, e_techn, e_descr) database "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//\n\n e_descr" <<component>> as e_alias
 
 !define System(e_alias, e_label) rectangle "==e_label" <<system>> as e_alias
 !define System(e_alias, e_label, e_descr) rectangle "==e_label\n\n e_descr" <<system>> as e_alias
