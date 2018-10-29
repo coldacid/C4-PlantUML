@@ -105,6 +105,14 @@ skinparam package<<boundary>> {
     BorderColor #cccccc
 }
 
+skinparam rectangle<<enterprise_boundary>> {
+    StereotypeFontSize 0
+    FontSize 0
+    FontColor #999999
+    BorderStyle dashed
+    BorderColor #cccccc
+}
+
 ' Layout
 ' ##################################
 
@@ -126,6 +134,7 @@ skinparam package<<boundary>> {
         |<EXTERNAL_SYSTEM_BG_COLOR>      | external system |
         |<CONTAINER_BG_COLOR>   | container |
         |<COMPONENT_BG_COLOR>   | component |
+        | <B>- - - - -</B> | enterprise boundary |
     endlegend
 !enddefinelong
 
@@ -166,6 +175,9 @@ skinparam package<<boundary>> {
 
 ' Boundaries
 ' ##################################
+
+!define Enterprise_Boundary(e_alias) rectangle "[Enterprise]" <<enterprise_boundary>> as e_alias
+!define Enterprise_Boundary(e_alias, e_label) package "==e_label [Enterprise]" <<boundary>> as e_alias
 !define System_Boundary(e_alias, e_label) package "==e_label [System]" <<boundary>> as e_alias
 !define Container_Boundary(e_alias, e_label) package "==e_label [Container]" <<boundary>> as e_alias
 
