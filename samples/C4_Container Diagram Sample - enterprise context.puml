@@ -7,7 +7,7 @@ LAYOUT_WITH_LEGEND
 
 Person(customer, "Customer", "A customer of Widgets Limited.")
 
-Enterprise_Boundary(c0) {
+Enterprise_Boundary_Rect(c0, "Widgets Limited") {
     Person(csa, "Customer Service Agent", "Deals with customer enquiries.")
 
     System(ecommerce, "E-commerce System", "Allows customers to buy widgts online via the widgets.com website.")

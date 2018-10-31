@@ -53,7 +53,7 @@ skinparam package<<boundary>> {
     BorderColor #cccccc
 }
 
-skinparam rectangle<<enterprise_boundary>> {
+skinparam rectangle<<boundary>> {
     StereotypeFontSize 0
     FontSize 0
     FontColor #999999
@@ -78,7 +78,7 @@ legend right
 |<PERSON_BG_COLOR>      | person |
 |<CONTAINER_BG_COLOR>   | container |
 |<SYSTEM_BG_COLOR>      | external system |
-| <B>- - - - -</B> | enterprise boundary |
+| <B>- - - - -</B> | boundary |
 endlegend
 !enddefinelong
 
@@ -100,8 +100,8 @@ endlegend
 ' Boundaries
 ' ##################################
 
-!define Enterprise_Boundary(e_alias) rectangle "[Enterprise]" <<enterprise_boundary>> as e_alias
 !define Enterprise_Boundary(e_alias, e_label) package "==e_label [Enterprise]" <<boundary>> as e_alias
+!define Enterprise_Boundary_Rect(e_alias, e_label) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[Enterprise]</size>" <<boundary>> as e_alias
 
 ' Relationship
 ' ##################################
