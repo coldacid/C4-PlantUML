@@ -56,6 +56,15 @@
 		],
 		"description": "Add a Container Boundary to C4 diagram"
 	},
+	"C4_Container_Boundary_Rect": {
+		"prefix": "Container Boundary in Rectangle",
+		"body": [
+			"Container_Boundary_Rect(${1:alias}, \"${2:label}\"){",
+			"\t$0",
+			"}"
+		],
+		"description": "Add a Container Boundary as Rectangle to C4 diagram"
+	},
 	"C4_Component": {
 		"prefix": "Component",
 		"body": [
@@ -113,6 +122,35 @@
 		],
 		"description": "Add a System Boundary to C4 diagram"
 	},
+	"C4_System_Boundary_Rect": {
+		"prefix": "System Boundary in Rectangle",
+		"body": [
+			"System_Boundary_Rect(${1:alias}, \"${2:label}\"){",
+			"\t$0",
+			"}"
+		],
+		"description": "Add a System Boundary as Rectangle to C4 diagram"
+	},
+
+	"C4_Enterprise_Boundary": {
+		"prefix": "Enterprise Boundary",
+		"body": [
+			"Enterprise_Boundary(${1:alias}, \"${2:label}\") {",
+			"\t$0",
+			"}"
+		],
+		"description": "Add Enterprise Boundary to C4 diagram"
+	},
+	"C4_Enterprise_Boundary_Rect": {
+		"prefix": "Enterprise Boundary in Rectangle",
+		"body": [
+			"Enterprise_Boundary_Rect(${1:alias}, \"${2:label}\") {",
+			"\t$0",
+			"}"
+		],
+		"description": "Add Enterprise Boundary as Rectangle to C4 diagram"
+	},
+
 	"C4_Relationship": {
 		"prefix": "Relationship",
 		"body": [

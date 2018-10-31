@@ -105,7 +105,7 @@ skinparam package<<boundary>> {
     BorderColor #cccccc
 }
 
-skinparam rectangle<<enterprise_boundary>> {
+skinparam rectangle<<boundary>> {
     StereotypeFontSize 0
     FontSize 0
     FontColor #999999
@@ -134,7 +134,7 @@ skinparam rectangle<<enterprise_boundary>> {
         |<EXTERNAL_SYSTEM_BG_COLOR>      | external system |
         |<CONTAINER_BG_COLOR>   | container |
         |<COMPONENT_BG_COLOR>   | component |
-        | <B>- - - - -</B> | enterprise boundary |
+        | <B>- - - - -</B> | boundary |
     endlegend
 !enddefinelong
 
@@ -176,10 +176,12 @@ skinparam rectangle<<enterprise_boundary>> {
 ' Boundaries
 ' ##################################
 
-!define Enterprise_Boundary(e_alias) rectangle "[Enterprise]" <<enterprise_boundary>> as e_alias
 !define Enterprise_Boundary(e_alias, e_label) package "==e_label [Enterprise]" <<boundary>> as e_alias
+!define Enterprise_Boundary_Rect(e_alias, e_label) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[Enterprise]</size>" <<boundary>> as e_alias
 !define System_Boundary(e_alias, e_label) package "==e_label [System]" <<boundary>> as e_alias
+!define System_Boundary_Rect(e_alias, e_label) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[System]</size>" <<boundary>> as e_alias
 !define Container_Boundary(e_alias, e_label) package "==e_label [Container]" <<boundary>> as e_alias
+!define Container_Boundary_Rect(e_alias, e_label) rectangle "==e_label\n<size:TECHN_FONT_SIZE>[Container]</size>" <<boundary>> as e_alias
 
 ' Relationship
 ' ##################################
