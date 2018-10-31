@@ -50,6 +50,25 @@
 		"description": "Add System with Description to C4 diagram"
 	},
 
+	"C4_Enterprise_Boundary": {
+		"prefix": "Enterprise Boundary",
+		"body": [
+			"Enterprise_Boundary(${1:alias}, \"${2:label}\") {",
+			"$0",
+			"}"
+		],
+		"description": "Add Enterprise Boundary to C4 diagram"
+	},
+	"C4_Enterprise_Boundary_Rect": {
+		"prefix": "Enterprise Boundary in Rectangle",
+		"body": [
+			"Enterprise_Boundary_Rect(${1:alias}, \"${2:label}\") {",
+			"$0",
+			"}"
+		],
+		"description": "Add Enterprise Boundary as Rectangle to C4 diagram"
+	},
+
 	"C4_Relationship": {
 		"prefix": "Relationship",
 		"body": [
